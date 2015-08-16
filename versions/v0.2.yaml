@@ -1,0 +1,115 @@
+defaults:
+  groups:
+  - llvm
+  - clang
+  - compiler-rt
+  ref: refs/heads/master
+  remote: github
+groups:
+- name: clang
+  projects:
+  - name: llvm-mirror/clang
+    path: llvm/tools/clang
+    ref: 2563c7550277a49b170db67b48d8449afe6f5780
+    remote: github
+  - name: llvm-mirror/clang-tools-extra
+    path: llvm/tools/clang/tools/extra
+    ref: 9d6774143e23b296acc7ca884f040996b69bc483
+    remote: github
+- name: projects
+  projects:
+  - name: llvm-mirror/compiler-rt
+    path: llvm/projects/compiler-rt
+    ref: ad9b758ccec60e53d4ee5feeea1765d0d8f5c184
+    remote: github
+  - name: llvm-mirror/libunwind
+    path: llvm/projects/libunwind
+    ref: 1d9ef03c3ee017838437e0f3197f2912eebdce5a
+    remote: github
+  - name: llvm-mirror/dragonegg
+    path: llvm/projects/dragonegg
+    ref: 72844cabb00c1fe46cb1c6cd452f8c283d4f28ef
+    remote: github
+- name: libcxx
+  projects:
+  - name: llvm-mirror/libcxx
+    path: llvm/projects/libcxx
+    ref: 1efadf976dafede4626f152f30322e24ef72eaf9
+    remote: github
+  - name: llvm-mirror/libcxxabi
+    path: llvm/projects/libcxxabi
+    ref: d8093df5ebe5d755c810980d403af20b32deea5f
+    remote: github
+- name: lld
+  projects:
+  - name: llvm-mirror/lld
+    path: llvm/tools/lld
+    ref: a4bc7d9bc4eec4d61fe664561e71a203da7abdc2
+    remote: github
+- name: lldb
+  projects:
+  - name: llvm-mirror/lldb
+    path: lldb
+    ref: c5dac24ee4683288213b4e30eb417ba4f694faac
+    remote: github
+- name: libclc
+  projects:
+  - name: llvm-mirror/libclc
+    path: libclc
+    ref: 63f5af3e9777bc37fa69accc2bf8c3b4fd6a15bf
+    remote: github
+- name: llvm
+  projects:
+  - name: llvm-mirror/llvm
+    path: llvm
+    ref: a0a77556655b27be819eef1608206d94560ab403
+    remote: github
+- name: tests
+  projects:
+  - name: llvm-mirror/lnt
+    path: lnt
+    ref: 355669e5c2b48c3d79b88ce973b771e2a46e616a
+    remote: github
+  - name: llvm-mirror/test-suite
+    path: test-suite
+    ref: 68f6dbdd835bf1a94988ee4c5a2d834c28d6c3bf
+    remote: github
+- name: openmp
+  projects:
+  - name: llvm-mirror/openmp
+    path: openmp
+    ref: aab4548382ba01af88fb480fa38973b135c3c84c
+    remote: github
+- name: polly
+  projects:
+  - name: llvm-mirror/polly
+    path: polly
+    ref: a20c12cbda6845a155fa85e1b5cff76e46a32124
+    remote: github
+- name: poolalloc
+  projects:
+  - name: llvm-mirror/poolalloc
+    path: poolalloc
+    ref: eb3a28cc226248240eb05273f543aca074979930
+    remote: github
+- name: zorg
+  projects:
+  - name: llvm-mirror/zorg
+    path: zorg
+    ref: c93d5712f13a1fd1cb0fbf43d79eda2934e99845
+    remote: github
+- name: klee
+  projects:
+  - name: llvm-mirror/klee
+    path: klee
+    ref: 898b8a4b9ecb65aec13ac241fb22b803e8f9accc
+    remote: github
+- name: vmkit
+  projects:
+  - name: llvm-mirror/vmkit
+    path: vmkit
+    ref: 8a76c22d56f7b8434ad52b81436981d757ad671e
+    remote: github
+remotes:
+- name: github
+  url: ssh://git@github.com
