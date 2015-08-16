@@ -14,10 +14,14 @@ groups:
           path: llvm/tools/clang
         - name: llvm-mirror/clang-tools-extra
           path: llvm/tools/clang/tools/extra
-    - name: compiler-rt
+    - name: projects
       projects:
         - name: llvm-mirror/compiler-rt
           path: llvm/projects/compiler-rt
+        - name: llvm-mirror/libunwind
+          path: llvm/projects/libunwind
+        - name: llvm-mirror/dragonegg
+          path: llvm/projects/dragonegg
     - name: libcxx
       projects:
         - name: llvm-mirror/libcxx
@@ -32,7 +36,41 @@ groups:
       projects:
         - name: llvm-mirror/lldb
           path: lldb
+    - name: libclc
+      projects:
+        - name: llvm-mirror/libclc
+          path: libclc
     - name: llvm
       projects:
         - name: llvm-mirror/llvm
           path: llvm
+    - name: tests
+      projects:
+        - name: llvm-mirror/lnt
+          path: lnt
+        - name: llvm-mirror/test-suite
+          path: test-suite
+    - name: openmp
+      projects:
+        - name: llvm-mirror/openmp
+          path: openmp
+    - name: polly
+      projects:
+        - name: llvm-mirror/polly
+          path: polly
+    - name: poolalloc
+      projects:
+        - name: llvm-mirror/poolalloc
+          path: poolalloc
+    - name: zorg
+      projects:
+        - name: llvm-mirror/zorg
+          path: zorg
+    - name: klee
+      projects:
+        - name: llvm-mirror/klee
+          path: klee
+    - name: vmkit
+      projects:
+        - name: llvm-mirror/vmkit
+          path: vmkit
