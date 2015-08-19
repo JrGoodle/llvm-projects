@@ -2,7 +2,7 @@ defaults:
   groups:
   - llvm
   - clang
-  - compiler-rt
+  - projects
   ref: refs/heads/master
   remote: github
 groups:
@@ -111,5 +111,7 @@ groups:
     ref: 8a76c22d56f7b8434ad52b81436981d757ad671e
     remote: github
 remotes:
-- name: github
+- name: github-ssh
   url: ssh://git@github.com
+- name: github
+  url: https://github.com
