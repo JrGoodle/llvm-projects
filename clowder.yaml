@@ -4,8 +4,10 @@ defaults:
     groups: [llvm, clang, compiler-rt]
 
 remotes:
-    - name: github
+    - name: github-ssh
       url: ssh://git@github.com
+    - name: github
+      url: https://github.com
 
 groups:
     - name: clang
