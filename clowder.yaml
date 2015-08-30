@@ -37,10 +37,6 @@ groups:
       projects:
         - name: llvm-mirror/lldb
           path: lldb
-    - name: libclc
-      projects:
-        - name: llvm-mirror/libclc
-          path: libclc
     - name: llvm
       projects:
         - name: llvm-mirror/llvm
@@ -51,27 +47,19 @@ groups:
           path: lnt
         - name: llvm-mirror/test-suite
           path: test-suite
-    - name: openmp
+    - name: other
       projects:
+        - name: llvm-mirror/libclc
+          path: libclc
         - name: llvm-mirror/openmp
           path: openmp
-    - name: polly
-      projects:
         - name: llvm-mirror/polly
           path: polly
-    - name: poolalloc
-      projects:
         - name: llvm-mirror/poolalloc
           path: poolalloc
-    - name: zorg
-      projects:
         - name: llvm-mirror/zorg
           path: zorg
-    - name: klee
-      projects:
         - name: llvm-mirror/klee
           path: klee
-    - name: vmkit
-      projects:
         - name: llvm-mirror/vmkit
           path: vmkit
