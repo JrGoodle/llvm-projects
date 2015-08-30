@@ -1,7 +1,6 @@
 defaults:
     ref: refs/heads/master
     remote: github
-    groups: [llvm, clang, projects]
 
 remotes:
     - name: github-ssh
