@@ -1,8 +1,9 @@
 defaults:
     ref: refs/heads/master
-    remote: github
+    remote: origin
+    source: github
 
-remotes:
+sources:
     - name: github-ssh
       url: ssh://git@github.com
     - name: github
@@ -17,11 +18,20 @@ groups:
       projects:
         - name: llvm-mirror/clang
           path: llvm/tools/clang
+          remote: upstream
+        - name: jrgoodle/clang
+          path: llvm/tools/clang
         - name: llvm-mirror/clang-tools-extra
+          path: llvm/tools/clang/tools/extra
+          remote: upstream
+        - name: jrgoodle/clang-tools-extra
           path: llvm/tools/clang/tools/extra
     - name: projects
       projects:
         - name: llvm-mirror/compiler-rt
+          path: llvm/projects/compiler-rt
+          remote: upstream
+        - name: jrgoodle/compiler-rt
           path: llvm/projects/compiler-rt
         - name: llvm-mirror/libunwind
           path: llvm/projects/libunwind
