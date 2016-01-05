@@ -22,14 +22,12 @@ groups:
           remote: upstream
           forks:
             - name: jrgoodle/clang
-              path: llvm/tools/clang
               remote: origin
         - name: llvm-mirror/clang-tools-extra
           path: llvm/tools/clang/tools/extra
           remote: upstream
           forks:
             - name: jrgoodle/clang-tools-extra
-              path: llvm/tools/clang/tools/extra
               remote: origin
     - name: projects
       projects:
@@ -38,7 +36,6 @@ groups:
           remote: upstream
           forks:
             - name: jrgoodle/compiler-rt
-              path: llvm/projects/compiler-rt
               remote: origin
         - name: llvm-mirror/libunwind
           path: llvm/projects/libunwind
