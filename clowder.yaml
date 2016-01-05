@@ -2,6 +2,7 @@ defaults:
     ref: refs/heads/master
     remote: origin
     source: github
+    depth: 1
 
 sources:
     - name: github-ssh
@@ -19,22 +20,28 @@ groups:
         - name: llvm-mirror/clang
           path: llvm/tools/clang
           remote: upstream
+          depth: 0
         - name: llvm-mirror/clang-tools-extra
           path: llvm/tools/clang/tools/extra
           remote: upstream
+          depth: 0
     - name: forks
       projects:
         - name: jrgoodle/clang
           path: llvm/tools/clang
+          depth: 0
         - name: jrgoodle/clang-tools-extra
           path: llvm/tools/clang/tools/extra
+          depth: 0
         - name: jrgoodle/compiler-rt
           path: llvm/projects/compiler-rt
+          depth: 0
     - name: projects
       projects:
         - name: llvm-mirror/compiler-rt
           path: llvm/projects/compiler-rt
           remote: upstream
+          depth: 0
         - name: llvm-mirror/libunwind
           path: llvm/projects/libunwind
         - name: llvm-mirror/dragonegg
