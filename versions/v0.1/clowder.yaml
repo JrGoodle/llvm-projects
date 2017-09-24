@@ -1,132 +1,144 @@
 defaults:
+  depth: 10
   ref: refs/heads/master
   remote: origin
   source: github
 groups:
 - name: llvm
   projects:
-  - name: llvm-mirror/llvm
+  - depth: 10
+    name: llvm-mirror/llvm
     path: llvm
-    ref: c8dacf406f170c0f03cbc59327ef6649fa480b17
+    ref: e402b549badd6aa7066802d91b711c8a995da317
     remote: origin
     source: github
 - name: clang
   projects:
-  - name: llvm-mirror/clang
+  - depth: 10
+    fork:
+      name: jrgoodle/clang
+      remote: origin
+    name: llvm-mirror/clang
     path: llvm/tools/clang
-    ref: fbd2901a30d987614df74465e21879e268f2d3ea
+    ref: f87b529510cd26b9835cca8602a504985b773efb
     remote: upstream
     source: github
-  - name: llvm-mirror/clang-tools-extra
+  - depth: 10
+    fork:
+      name: jrgoodle/clang-tools-extra
+      remote: origin
+    name: llvm-mirror/clang-tools-extra
     path: llvm/tools/clang/tools/extra
-    ref: d8afa7237b0a86e17aa1b72a214ec704d66b9069
+    ref: d360ad8ecdd284acf270c5a9ea8c4c427b5dca02
     remote: upstream
-    source: github
-- name: forks
-  projects:
-  - name: jrgoodle/compiler-rt
-    path: llvm/projects/compiler-rt
-    ref: 2f398402dd3aef14ac764a33b726f1a483d7959e
-    remote: origin
-    source: github
-  - name: jrgoodle/clang
-    path: llvm/tools/clang
-    ref: fbd2901a30d987614df74465e21879e268f2d3ea
-    remote: origin
-    source: github
-  - name: jrgoodle/clang-tools-extra
-    path: llvm/tools/clang/tools/extra
-    ref: d8afa7237b0a86e17aa1b72a214ec704d66b9069
-    remote: origin
     source: github
 - name: projects
   projects:
-  - name: llvm-mirror/klee
+  - depth: 10
+    name: llvm-mirror/klee
     path: klee
-    ref: 898b8a4b9ecb65aec13ac241fb22b803e8f9accc
+    ref: c226d47e23a54a2e655faeb8dc027ab125064823
     remote: origin
     source: github
-  - name: llvm-mirror/libclc
+  - depth: 10
+    name: llvm-mirror/libclc
     path: libclc
-    ref: f9b8aac70c01a85cf70267320a97fe0c51fb15da
+    ref: fb79355642cb7120597f887189f7c4f6c8f426c6
     remote: origin
     source: github
-  - name: llvm-mirror/compiler-rt
+  - depth: 10
+    fork:
+      name: jrgoodle/compiler-rt
+      remote: origin
+    name: llvm-mirror/compiler-rt
     path: llvm/projects/compiler-rt
-    ref: 2f398402dd3aef14ac764a33b726f1a483d7959e
+    ref: feeabcf3b98ef72cdbd24c5b98db1e41ec53e219
     remote: upstream
     source: github
-  - name: llvm-mirror/dragonegg
+  - depth: 10
+    name: llvm-mirror/dragonegg
     path: llvm/projects/dragonegg
     ref: 72844cabb00c1fe46cb1c6cd452f8c283d4f28ef
     remote: origin
     source: github
-  - name: llvm-mirror/libunwind
+  - depth: 10
+    name: llvm-mirror/libunwind
     path: llvm/projects/libunwind
-    ref: 1d9ef03c3ee017838437e0f3197f2912eebdce5a
+    ref: 43b67bf067d95e7515a9c3d516a0b5a1c1cdaf24
     remote: origin
     source: github
-  - name: llvm-mirror/openmp
+  - depth: 10
+    name: llvm-mirror/openmp
     path: openmp
-    ref: e78ed18a557548497908b4286526743872ddbe43
+    ref: 31535f3451001f4b5f3e56810935a617e165a5b4
     remote: origin
     source: github
-  - name: llvm-mirror/polly
+  - depth: 10
+    name: llvm-mirror/polly
     path: polly
-    ref: e68bf82dd6c2eff8e026cda96e11b067e14ef67b
+    ref: e9272ed2bad0f652f7fdc8d805daadf9e213989d
     remote: origin
     source: github
-  - name: llvm-mirror/poolalloc
+  - depth: 10
+    name: llvm-mirror/poolalloc
     path: poolalloc
     ref: eb3a28cc226248240eb05273f543aca074979930
     remote: origin
     source: github
-  - name: llvm-mirror/vmkit
+  - depth: 10
+    name: llvm-mirror/vmkit
     path: vmkit
     ref: 8a76c22d56f7b8434ad52b81436981d757ad671e
     remote: origin
     source: github
-  - name: llvm-mirror/zorg
+  - depth: 10
+    name: llvm-mirror/zorg
     path: zorg
-    ref: 1b1c332d5aaa868e7561b069f60aa81223844f1f
+    ref: ff322e7924abce8bd3fa05a86c4c5d3ca8862cf4
     remote: origin
     source: github
 - name: lldb
   projects:
-  - name: llvm-mirror/lldb
+  - depth: 10
+    name: llvm-mirror/lldb
     path: lldb
-    ref: df240072b9df237d733f230025d8ddd5733628a4
+    ref: cd02a86597d6fc361540222b286186933976719a
     remote: origin
     source: github
 - name: lld
   projects:
-  - name: llvm-mirror/lld
+  - depth: 10
+    name: llvm-mirror/lld
     path: llvm/tools/lld
-    ref: 101fc3394c39f084efb27f778facc5d2c299c3e1
+    ref: 6d4427d00f6da8376edae64f9d5db621c4890e84
     remote: origin
     source: github
 - name: libcxx
   projects:
-  - name: llvm-mirror/libcxx
+  - depth: 10
+    name: llvm-mirror/libcxx
     path: llvm/projects/libcxx
-    ref: 6d9da5891f6628ffa9d2f382113a8231121aeee1
+    ref: 1e32db7b33e5341b02751f6f3e510393e557d77c
     remote: origin
     source: github
-  - name: llvm-mirror/libcxxabi
+  - depth: 10
+    name: llvm-mirror/libcxxabi
     path: llvm/projects/libcxxabi
-    ref: 7aff420fb2b10cbad3339f45fbdb924fa21d76d7
+    ref: 05ba3281482304ae8de31123a594972a495da06d
     remote: origin
     source: github
 - name: tests
   projects:
-  - name: llvm-mirror/lnt
+  - depth: 10
+    name: llvm-mirror/lnt
     path: lnt
-    ref: 66a63b0d5f6958e0e661941715d0e3dfd82e2d45
+    ref: 29cb310f485c40f39787eb8222e3ff3f516c2260
     remote: origin
     source: github
-  - name: llvm-mirror/test-suite
+  - depth: 10
+    name: llvm-mirror/test-suite
     path: test-suite
-    ref: b03c61699ad7f5882624a7c631fbf2437af42418
+    ref: 3af4342e5aca73cef4ee1135b5534d22959ab300
     remote: origin
     source: github
 sources:
