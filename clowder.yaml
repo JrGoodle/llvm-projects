@@ -2,13 +2,12 @@ defaults:
     ref: refs/heads/master
     remote: origin
     source: github
+    protocol: https
     depth: 10
 
 sources:
-    - name: github-ssh
-      url: ssh://git@github.com
     - name: github
-      url: https://github.com
+      url: github.com
 
 groups:
     - name: llvm
